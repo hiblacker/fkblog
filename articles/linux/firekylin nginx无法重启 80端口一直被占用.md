@@ -15,10 +15,6 @@ nginx: [emerg] bind() to 0.0.0.0:80 failed (98: Address already in use)
 # 假设任务id为0
 pm2 stop 0
 ```
-然后删掉
-```
-pm2 delete 0
-```
 
 查看端口占用情况
 
@@ -26,7 +22,7 @@ pm2 delete 0
 netstat -ntpl
 ```
 
-ok，没有自动重启。
+看到没有80端口被占用了，再重启nginx。
 
 接着重启 nginx ：
 ```base
