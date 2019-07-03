@@ -27,7 +27,7 @@ mysql> show database;
 ### 授权
 将这个数据库授予一个叫 myblog 的用户使用 密码为 myblog 
 ```
-mysql> grant all privileges on db_blog.* to myblog@localhost identified by 'myblog';
+mysql> GRANT ALL PRIVILEGES ON db_blog.* TO myblog@localhost IDENTIFIED BY 'myblog';
 ```
 
 ### 开放远程登录权限
@@ -41,7 +41,7 @@ sudo vi /etc/mysql/mysql.conf.d/mysqld.cnf
 #### 2. 授予用户远程登录权限。
 
 ```
-mysql> GRANT ALL PRIVILEGES ON db_blog.* TO blog@"%" IDENTIFIED BY "blog";
+mysql> GRANT ALL PRIVILEGES ON db_blog.* TO myblog@"%" IDENTIFIED BY "myblog";
 ```
 
 ### 开启服务
