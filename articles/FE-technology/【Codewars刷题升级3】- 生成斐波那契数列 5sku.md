@@ -95,5 +95,3 @@ function perimeter(n){
 4. [`...` 拓展运算符](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
 
 [欢迎star](https://github.com/hiblacker/codewars-daily)
-
-(完)

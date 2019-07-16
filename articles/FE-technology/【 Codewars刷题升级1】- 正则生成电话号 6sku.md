@@ -40,35 +40,24 @@ console.log(createPhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0])); // "(123) 456-78
 
 成功提交自己的答案后，可以浏览别人的解，有最佳实践和最聪明解（clever）。
 
--   这个是最佳实践票数最高的：
-
+### 精选解一：
 ```js
 function createPhoneNumber(numbers) {
     numbers = numbers.join('');
-    return (
-        '(' +
-        numbers.substring(0, 3) +
-        ') ' +
-        numbers.substring(3, 6) +
-        '-' +
-        numbers.substring(6)
-    );
+    return `(${numbers.substring(0, 3)}) ${numbers.substring(3, 6)}-${numbers.substring(6)}`
 }
 ```
 
-代码简单，效率高，最佳实践，没毛病。
-
--   再看看最聪明解：
+### 精选解二：
 
 ```js
 function createPhoneNumber(numbers) {
     return numbers.join('').replace(/(...)(...)(.*)/, '($1) $2-$3');
 }
 ```
-
 我的解跟这个解类似，但此解兼容性更高一些。
 
--   最后看看 WTF 解：
+### 精选解三：
 
 ```js
 function createPhoneNumber(numbers) {
@@ -91,23 +80,7 @@ function createPhoneNumber(numbers) {
 }
 ```
 
-这。。。是不是太 low 了?
-
-来看看网友评论：
-
-```
-Some might say this isn't the most elegant to look at, but in my benchmark I found this solution to be the fastest by far. More than twice as fast as the closest competitor.
-```
-
-`虽然代码不是很优雅，但经过测试是目前最快的` 嗯，你说的很有道理。
-
-```
-Seems to run the fastest. Sometimes the simpler solution is the best.
-```
-
-好吧，代码不是很优雅，不过有网友说这是最快的代码。
-
-但很多时候，语义、可读性、编码体验更重要，难道因为`for`循环效率更高，我们就不去使用`map`、`forEach`了吗？不要陷入过分追求性能的误区。
+虽然不够优雅，但有网友评论说这是最快的解。[摊手]
 
 ## 本题相关知识
 
@@ -116,5 +89,3 @@ Seems to run the fastest. Sometimes the simpler solution is the best.
 3. [正则表达式](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions)
 
 [欢迎 star](https://github.com/hiblacker/codewars-daily)
-
-感谢开源，peace。
