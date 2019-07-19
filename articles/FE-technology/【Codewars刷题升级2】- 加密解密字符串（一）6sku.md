@@ -1,4 +1,4 @@
-## 问题描述
+## 加密解密字符串 Simple Encryption #1 - Alternating Split
 Codewars 中难度等级由高到低为：8sku -> 1sku，1sku 最难。本题难度 6sku。
 
 > For building the encrypted string:
