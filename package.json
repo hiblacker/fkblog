@@ -37,7 +37,7 @@
         "marked": "^0.3.19",
         "mathjax": "^2.7.4",
         "mathjax-node": "^1.3.0",
-        "moment": "^2.22.0",
+        "moment": "^2.29.2",
         "nodemailer": "^2.7.2",
         "on-finished": "^2.3.0",
         "phpass": "^0.1.1",
